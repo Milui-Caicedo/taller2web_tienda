@@ -28,7 +28,7 @@ function magnify(imgID, zoom) {
       var pos, x, y;
       /*prevent any other actions that may occur when moving over the image*/
       e.preventDefault();
-      /*get the cursor's x and y positions:*/
+      /*cambiar de posiciones*/
       pos = getCursorPos(e);
       x = pos.x;
       y = pos.y;
