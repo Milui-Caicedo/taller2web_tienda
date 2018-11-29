@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+    <title>Fisher Price</title>
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="/about">Acerca de fisher price</a></li>
+                <li><a href="/">Productos</a></li>
+                <li><a href="/apps">Aplicaciones</a></li>
+            </ul>
+            <a id="carrito-icon" href="/checkout"><span class="carrito"></span><img src="/img/car.png" alt=""></a>
+        </nav>
+        <div class="landing">
+            <a href="/tienda"><img class="img-landing" src="/img/logo.png" alt="Fisher Price"></a>
+        </div>
+        <div id="search">
+            <div class="size">
+                <select name="marca" id="marca">
+                    <option value="" disabled selected hidden>Marca</option>
+                    <option value="little people">Little People</option>
+                    <option value="Tomas and friends">Tomas and friends</option>
+                    <option value="power wheels">Power Wheels</option>
+                    <option value="shimmer and shine">Shimmer And Shine</option>
+                </select>
+                <select name="edad" id="edad">
+                    <option value="" disabled selected hidden>Edad</option>
+                    <option value="1">1 años</option>
+                    <option value="2">2 años</option>
+                    <option value="3">3 años</option>
+                    <option value="4">4 años</option>
+                    <option value="5">5 años</option>
+                </select>
+                <select name="categoria" id="categoria">
+                    <option value="" disabled selected hidden>Categoria</option>
+                    <option value="figuras">Figuras de acción</option>
+                    <option value="casas">Casas</option>
+                    <option value="carros">Carros</option>
+                    <option value="accesorios">Accesorios</option>
+                </select>
+                <button id="buscar">search</button>
+            </div>
+        </div>
+        <div class="productos">
+            {{#each productos}}
+            <div class="item {{#if descuento}}descuento{{/if}}" data-name="{{name}}">
+                <a href="/producto/{{name}}">
+                    <img src="/img/{{name}}.jpg" alt="" onclick="preventDefaul()">
+                    <h5>{{marca}} - {{name}}</h5>
+                    <div class="datos">
+                        <h3>${{price}} <span>c/p</span></h3>
+                        <div class="infito">
+                            <p>edad: {{age}} años</p>
+                            <p>tags: {{categoria}}</p>
+                        </div>
+                    </div>
+                </a>
+                    <img src="/img/car.png" class='carrito-add' alt="">
+            </div>
+            {{/each}}
+        </div>
+
+        <div class="piezas">
+            <img src="/img/borde2.png" alt="">
+            <div class="repuesto">
+                <h1>¿Necesitas piezas de repuesto?</h1>
+                <h3>las puedes ordenar por nuestra página de servicio al cliente</h3>
+            </div>
+            <img src="/img/boder1.png" alt="">
+        </div>
+        <div class="more-info">
+            <h1>+ Más información</h1>
+        </div>
+        <footer>
+            <section class="footer__gray">
+            <article>
+                <section class="footer__left">
+                        <ul>
+                            <li><a href="">Mattel, Nuestra casa Matriz</a></li>
+                            <li><a href="">Empleos</a></li>
+                            <li><a href="">Contactanos</a></li>
+                            <li><a href="">Retiros del mercado</a></li>
+                            <li><a href="">Piezas y Repuestos</a></li>
+                        </ul>
+                    </section>
+                    <section class="footer__right">
+                        <ul>
+                            <li><a href="">Terminos y condiciones de Fisher - Price</a></li>
+                            <li><a href="">Politica de confidencialidad</a></li>
+                        </ul>
+                    </section>
+            </article>
+            <p>Pagina inicial de los juguetes Fisher - Price y mas | El uso de este sitio implica que aceptas los terminos y condiciones del miso</p>
+        </section>
+            <a href="/"><img src="/img/logo.png" alt=""></a>
+            <div class="red-border"></div>
+        </footer>
+    </div>
+    <script src="/js/busqueda.js"></script>
+    <script src="/js/actualizar.js"></script>
+    <script src="/animations/animacion.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/plugins/CSSPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TimelineLite.min.js"></script>
+</body>
+
+</html>

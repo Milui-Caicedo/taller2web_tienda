@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Fisher Price</title>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="/about">Acerca de fisher price</a></li>
+                <li><a href="/tienda">Productos</a></li>
+                <li><a href="/apps">Aplicaciones</a></li>
+            </ul>
+            <a id="carrito-icon" href="/checkout"><span class="carrito"></span><img src="/img/car.png" alt=""></a>
+        </nav>
+        <div class="landing">
+            <a href="/tienda"><img class="img-landing" src="/img/logo.png" alt="Fisher Price"></a>
+        </div>
+    
+    <!--<div class="music-title">
+        <h2>Prueba nuestro tocadiscos</h2>
+    </div>-->
+    <main>
+        <div id="astros"><img src="/img/sun.gif" alt="" id="solyluna" width="150" ></div>
+    
+    <div id="cielo">
+        <div id="strellas"></div>
+    </div>
+    
+    <div class="disquitos">
+    <div class="cajamusical">
+        <div class="disk"><img src="/img/disco.gif" alt="" ></div>
+    </div>
+    <div id="controles">
+        <audio id="song__one">
+        <source src="/audio/Your Song - Lullaby Renditions of Elton John - Rockabye Baby.mp3" type="audio/mpeg">
+        </audio>
+        <audio id="song__two">
+        <source src="/audio/Babies Go Beatles Vol.2 - Here comes the sun.mp3" type="audio/mpeg">
+        </audio>
+        <audio id="song__three">
+        <source src="/audio/Babies Go Beatles   Obladi Oblada.mp3" type="audio/mpeg">
+        </audio>
+        
+        <img src="/img/disco.gif" alt="" width="150"  id="song" onclick="playSongOne()">
+        <img src="/img/disco.gif" alt="" width="150"  id="song" onclick="playSongTwo()">
+        <img src="/img/disco.gif" alt="" width="150" id="song" onclick="playSongThree()">
+    </div>
+    </div>
+
+    <button id="encendido" status="off">Start</button>
+    
+</main>
+
+    <footer>
+        <section class="footer__gray">
+            <article>
+                <section class="footer__left">
+                        <ul>
+                            <li><a href="">Mattel, Nuestra casa Matriz</a></li>
+                            <li><a href="">Empleos</a></li>
+                            <li><a href="">Contactanos</a></li>
+                            <li><a href="">Retiros del mercado</a></li>
+                            <li><a href="">Piezas y Repuestos</a></li>
+                        </ul>
+                    </section>
+                    <section class="footer__right">
+                        <ul>
+                            <li><a href="">Terminos y condiciones de Fisher - Price</a></li>
+                            <li><a href="">Politica de confidencialidad</a></li>
+                        </ul>
+                    </section>
+            </article>
+            <p>Pagina inicial de los juguetes Fisher - Price y mas | El uso de este sitio implica que aceptas los terminos y condiciones del miso</p>
+        </section>
+            <a href="/"><img src="/img/logo.png" alt=""></a>
+            <div class="red-border"></div>
+    </footer>
+    </div>
+    <script>
+    for(var i=0; i<30;i++){
+        var star = document.createElement("div");
+        star.className = "star";
+        document.getElementById("strellas").appendChild(star);
+    }
+    </script>
+    <script src="/animations/music.js"></script>
+    <script src="/animations/animacion.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/plugins/CSSPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TimelineLite.min.js"></script>
+
+</body>
+</html>
